@@ -1,0 +1,488 @@
+[ec2-user@ip-172-31-21-175 ~]$ mkdir husband\
+> ^C
+[ec2-user@ip-172-31-21-175 ~]$ mkdir husband
+[ec2-user@ip-172-31-21-175 ~]$ ls
+husband
+[ec2-user@ip-172-31-21-175 ~]$ cd husband
+[ec2-user@ip-172-31-21-175 husband]$ pwd
+/home/ec2-user/husband
+[ec2-user@ip-172-31-21-175 husband]$ nano wife
+[ec2-user@ip-172-31-21-175 husband]$ cat wife
+we are working 
+i want to pass the certification
+we are very successful
+chiedu must get certified
+
+[ec2-user@ip-172-31-21-175 husband]$ ls -al
+total 4
+drwxr-xr-x. 2 ec2-user ec2-user 18 Jul 25 14:21 .
+drwx------. 4 ec2-user ec2-user 89 Jul 25 14:18 ..
+-rw-r--r--. 1 ec2-user ec2-user 99 Jul 25 14:21 wife
+[ec2-user@ip-172-31-21-175 husband]$ chmod 011 wife
+[ec2-user@ip-172-31-21-175 husband]$ ls -al
+total 4
+drwxr-xr-x. 2 ec2-user ec2-user 18 Jul 25 14:21 .
+drwx------. 4 ec2-user ec2-user 89 Jul 25 14:18 ..
+------x--x. 1 ec2-user ec2-user 99 Jul 25 14:21 wife
+[ec2-user@ip-172-31-21-175 husband]$ rm wife
+rm: remove write-protected regular file 'wife'? yes
+[ec2-user@ip-172-31-21-175 husband]$ ls
+[ec2-user@ip-172-31-21-175 husband]$ sudo yum install nginx
+Last metadata expiration check: 0:22:31 ago on Tue Jul 25 14:12:05 2023.
+Dependencies resolved.
+======================================================================================================================================================
+ Package                                 Architecture               Version                                     Repository                       Size
+======================================================================================================================================================
+Installing:
+ nginx                                   x86_64                     1:1.24.0-1.amzn2023.0.1                     amazonlinux                      32 k
+Installing dependencies:
+ generic-logos-httpd                     noarch                     18.0.0-12.amzn2023.0.3                      amazonlinux                      19 k
+ gperftools-libs                         x86_64                     2.9.1-1.amzn2023.0.2                        amazonlinux                     309 k
+ libunwind                               x86_64                     1.4.0-5.amzn2023.0.2                        amazonlinux                      66 k
+ nginx-core                              x86_64                     1:1.24.0-1.amzn2023.0.1                     amazonlinux                     586 k
+ nginx-filesystem                        noarch                     1:1.24.0-1.amzn2023.0.1                     amazonlinux                     9.0 k
+ nginx-mimetypes                         noarch                     2.1.49-3.amzn2023.0.3                       amazonlinux                      21 k
+
+Transaction Summary
+======================================================================================================================================================
+Install  7 Packages
+
+Total download size: 1.0 M
+Installed size: 3.4 M
+Is this ok [y/N]: y  
+Downloading Packages:
+(1/7): libunwind-1.4.0-5.amzn2023.0.2.x86_64.rpm                                                                      811 kB/s |  66 kB     00:00    
+(2/7): nginx-1.24.0-1.amzn2023.0.1.x86_64.rpm                                                                         324 kB/s |  32 kB     00:00    
+(3/7): gperftools-libs-2.9.1-1.amzn2023.0.2.x86_64.rpm                                                                2.6 MB/s | 309 kB     00:00    
+(4/7): nginx-core-1.24.0-1.amzn2023.0.1.x86_64.rpm                                                                     13 MB/s | 586 kB     00:00    
+(5/7): nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch.rpm                                                               785 kB/s |  21 kB     00:00    
+(6/7): nginx-filesystem-1.24.0-1.amzn2023.0.1.noarch.rpm                                                              516 kB/s | 9.0 kB     00:00    
+(7/7): generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch.rpm                                                          678 kB/s |  19 kB     00:00    
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                 4.6 MB/s | 1.0 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                              1/1 
+  Running scriptlet: nginx-filesystem-1:1.24.0-1.amzn2023.0.1.noarch                                                                              1/7 
+  Installing       : nginx-filesystem-1:1.24.0-1.amzn2023.0.1.noarch                                                                              1/7 
+  Installing       : nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch                                                                                 2/7 
+  Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                            3/7 
+  Installing       : libunwind-1.4.0-5.amzn2023.0.2.x86_64                                                                                        4/7 
+  Installing       : gperftools-libs-2.9.1-1.amzn2023.0.2.x86_64                                                                                  5/7 
+  Installing       : nginx-core-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                    6/7 
+  Installing       : nginx-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                         7/7 
+  Running scriptlet: nginx-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                         7/7 
+  Verifying        : gperftools-libs-2.9.1-1.amzn2023.0.2.x86_64                                                                                  1/7 
+  Verifying        : libunwind-1.4.0-5.amzn2023.0.2.x86_64                                                                                        2/7 
+  Verifying        : nginx-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                         3/7 
+  Verifying        : nginx-core-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                    4/7 
+  Verifying        : nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch                                                                                 5/7 
+  Verifying        : nginx-filesystem-1:1.24.0-1.amzn2023.0.1.noarch                                                                              6/7 
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                            7/7 
+
+Installed:
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch   gperftools-libs-2.9.1-1.amzn2023.0.2.x86_64   libunwind-1.4.0-5.amzn2023.0.2.x86_64            
+  nginx-1:1.24.0-1.amzn2023.0.1.x86_64                nginx-core-1:1.24.0-1.amzn2023.0.1.x86_64     nginx-filesystem-1:1.24.0-1.amzn2023.0.1.noarch  
+  nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch       
+
+Complete!
+[ec2-user@ip-172-31-21-175 husband]$ sudo systemctl enable nginx
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+[ec2-user@ip-172-31-21-175 husband]$ sudo systemctl start nginx
+[ec2-user@ip-172-31-21-175 husband]$ sudo systemctl status nginx
+● nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: disabled)
+     Active: active (running) since Tue 2023-07-25 14:37:39 UTC; 37s ago
+    Process: 26278 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+    Process: 26279 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+    Process: 26280 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+   Main PID: 26281 (nginx)
+      Tasks: 2 (limit: 1114)
+     Memory: 2.2M
+        CPU: 57ms
+     CGroup: /system.slice/nginx.service
+             ├─26281 "nginx: master process /usr/sbin/nginx"
+             └─26282 "nginx: worker process"
+
+Jul 25 14:37:38 ip-172-31-21-175.ec2.internal systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+Jul 25 14:37:38 ip-172-31-21-175.ec2.internal nginx[26279]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jul 25 14:37:38 ip-172-31-21-175.ec2.internal nginx[26279]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jul 25 14:37:39 ip-172-31-21-175.ec2.internal systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
+[ec2-user@ip-172-31-21-175 husband]$ ^C
+[ec2-user@ip-172-31-21-175 husband]$ sudo yum remove nginx
+Dependencies resolved.
+======================================================================================================================================================
+ Package                                Architecture              Version                                       Repository                       Size
+======================================================================================================================================================
+Removing:
+ nginx                                  x86_64                    1:1.24.0-1.amzn2023.0.1                       @amazonlinux                    128 k
+Removing unused dependencies:
+ generic-logos-httpd                    noarch                    18.0.0-12.amzn2023.0.3                        @amazonlinux                     21 k
+ gperftools-libs                        x86_64                    2.9.1-1.amzn2023.0.2                          @amazonlinux                    1.4 M
+ libunwind                              x86_64                    1.4.0-5.amzn2023.0.2                          @amazonlinux                    165 k
+ nginx-core                             x86_64                    1:1.24.0-1.amzn2023.0.1                       @amazonlinux                    1.6 M
+ nginx-filesystem                       noarch                    1:1.24.0-1.amzn2023.0.1                       @amazonlinux                      0  
+ nginx-mimetypes                        noarch                    2.1.49-3.amzn2023.0.3                         @amazonlinux                     43 k
+
+Transaction Summary
+======================================================================================================================================================
+Remove  7 Packages
+
+Freed space: 3.4 M
+Is this ok [y/N]: y
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                              1/1 
+  Running scriptlet: nginx-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                         1/7 
+Removed "/etc/systemd/system/multi-user.target.wants/nginx.service".
+
+  Erasing          : nginx-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                         1/7 
+  Running scriptlet: nginx-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                         1/7 
+  Erasing          : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                            2/7 
+  Erasing          : nginx-core-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                    3/7 
+  Erasing          : nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch                                                                                 4/7 
+  Erasing          : gperftools-libs-2.9.1-1.amzn2023.0.2.x86_64                                                                                  5/7 
+  Erasing          : nginx-filesystem-1:1.24.0-1.amzn2023.0.1.noarch                                                                              6/7 
+  Erasing          : libunwind-1.4.0-5.amzn2023.0.2.x86_64                                                                                        7/7 
+  Running scriptlet: libunwind-1.4.0-5.amzn2023.0.2.x86_64                                                                                        7/7 
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                            1/7 
+  Verifying        : gperftools-libs-2.9.1-1.amzn2023.0.2.x86_64                                                                                  2/7 
+  Verifying        : libunwind-1.4.0-5.amzn2023.0.2.x86_64                                                                                        3/7 
+  Verifying        : nginx-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                         4/7 
+  Verifying        : nginx-core-1:1.24.0-1.amzn2023.0.1.x86_64                                                                                    5/7 
+  Verifying        : nginx-filesystem-1:1.24.0-1.amzn2023.0.1.noarch                                                                              6/7 
+  Verifying        : nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch                                                                                 7/7 
+
+Removed:
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch   gperftools-libs-2.9.1-1.amzn2023.0.2.x86_64   libunwind-1.4.0-5.amzn2023.0.2.x86_64            
+  nginx-1:1.24.0-1.amzn2023.0.1.x86_64                nginx-core-1:1.24.0-1.amzn2023.0.1.x86_64     nginx-filesystem-1:1.24.0-1.amzn2023.0.1.noarch  
+  nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch       
+
+Complete!
+[ec2-user@ip-172-31-21-175 husband]$ history
+    1  mkdir husband\
+    2  mkdir husband
+    3  ls
+    4  cd husband
+    5  pwd
+    6  nano wife
+    7  cat wife
+    8  ls -al
+    9  chmod 011 wife
+   10  ls -al
+   11  rm wife
+   12  ls
+   13  sudo yum install nginx
+   14  sudo systemctl enable nginx
+   15  sudo systemctl start nginx
+   16  sudo systemctl status nginx
+   17  sudo yum remove nginx
+   18  history
+[ec2-user@ip-172-31-21-175 husband]$ sudo yum install httpd
+Last metadata expiration check: 0:34:36 ago on Tue Jul 25 14:12:05 2023.
+Dependencies resolved.
+======================================================================================================================================================
+ Package                                 Architecture               Version                                     Repository                       Size
+======================================================================================================================================================
+Installing:
+ httpd                                   x86_64                     2.4.56-1.amzn2023                           amazonlinux                      48 k
+Installing dependencies:
+ apr                                     x86_64                     1.7.2-2.amzn2023.0.2                        amazonlinux                     129 k
+ apr-util                                x86_64                     1.6.3-1.amzn2023.0.1                        amazonlinux                      98 k
+ generic-logos-httpd                     noarch                     18.0.0-12.amzn2023.0.3                      amazonlinux                      19 k
+ httpd-core                              x86_64                     2.4.56-1.amzn2023                           amazonlinux                     1.4 M
+ httpd-filesystem                        noarch                     2.4.56-1.amzn2023                           amazonlinux                      15 k
+ httpd-tools                             x86_64                     2.4.56-1.amzn2023                           amazonlinux                      82 k
+ libbrotli                               x86_64                     1.0.9-4.amzn2023.0.2                        amazonlinux                     315 k
+ mailcap                                 noarch                     2.1.49-3.amzn2023.0.3                       amazonlinux                      33 k
+Installing weak dependencies:
+ apr-util-openssl                        x86_64                     1.6.3-1.amzn2023.0.1                        amazonlinux                      17 k
+ mod_http2                               x86_64                     2.0.11-2.amzn2023                           amazonlinux                     150 k
+ mod_lua                                 x86_64                     2.4.56-1.amzn2023                           amazonlinux                      62 k
+
+Transaction Summary
+======================================================================================================================================================
+Install  12 Packages
+
+Total download size: 2.3 M
+Installed size: 6.9 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/12): httpd-2.4.56-1.amzn2023.x86_64.rpm                                                                            665 kB/s |  48 kB     00:00    
+(2/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                      1.3 MB/s |  98 kB     00:00    
+(3/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                              1.0 MB/s |  17 kB     00:00    
+(4/12): apr-1.7.2-2.amzn2023.0.2.x86_64.rpm                                                                           1.1 MB/s | 129 kB     00:00    
+(5/12): httpd-core-2.4.56-1.amzn2023.x86_64.rpm                                                                        26 MB/s | 1.4 MB     00:00    
+(6/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                                     6.7 MB/s | 315 kB     00:00    
+(7/12): mod_lua-2.4.56-1.amzn2023.x86_64.rpm                                                                          3.0 MB/s |  62 kB     00:00    
+(8/12): httpd-tools-2.4.56-1.amzn2023.x86_64.rpm                                                                      3.8 MB/s |  82 kB     00:00    
+(9/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.rpm                                                                      2.0 MB/s |  33 kB     00:00    
+(10/12): mod_http2-2.0.11-2.amzn2023.x86_64.rpm                                                                       5.5 MB/s | 150 kB     00:00    
+(11/12): httpd-filesystem-2.4.56-1.amzn2023.noarch.rpm                                                                1.1 MB/s |  15 kB     00:00    
+(12/12): generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch.rpm                                                        968 kB/s |  19 kB     00:00    
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                 9.8 MB/s | 2.3 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                              1/1 
+  Installing       : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                             1/12 
+  Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                2/12 
+  Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                        3/12 
+  Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                        4/12 
+  Installing       : httpd-tools-2.4.56-1.amzn2023.x86_64                                                                                        5/12 
+  Running scriptlet: httpd-filesystem-2.4.56-1.amzn2023.noarch                                                                                   6/12 
+  Installing       : httpd-filesystem-2.4.56-1.amzn2023.noarch                                                                                   6/12 
+  Installing       : httpd-core-2.4.56-1.amzn2023.x86_64                                                                                         7/12 
+  Installing       : mod_lua-2.4.56-1.amzn2023.x86_64                                                                                            8/12 
+  Installing       : mod_http2-2.0.11-2.amzn2023.x86_64                                                                                          9/12 
+  Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                          10/12 
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                      11/12 
+  Installing       : httpd-2.4.56-1.amzn2023.x86_64                                                                                             12/12 
+  Running scriptlet: httpd-2.4.56-1.amzn2023.x86_64                                                                                             12/12 
+  Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                             1/12 
+  Verifying        : httpd-2.4.56-1.amzn2023.x86_64                                                                                              2/12 
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                        3/12 
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                4/12 
+  Verifying        : httpd-core-2.4.56-1.amzn2023.x86_64                                                                                         5/12 
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                       6/12 
+  Verifying        : mod_lua-2.4.56-1.amzn2023.x86_64                                                                                            7/12 
+  Verifying        : httpd-tools-2.4.56-1.amzn2023.x86_64                                                                                        8/12 
+  Verifying        : mod_http2-2.0.11-2.amzn2023.x86_64                                                                                          9/12 
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                       10/12 
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                          11/12 
+  Verifying        : httpd-filesystem-2.4.56-1.amzn2023.noarch                                                                                  12/12 
+
+Installed:
+  apr-1.7.2-2.amzn2023.0.2.x86_64                        apr-util-1.6.3-1.amzn2023.0.1.x86_64      apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64     
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch      httpd-2.4.56-1.amzn2023.x86_64            httpd-core-2.4.56-1.amzn2023.x86_64              
+  httpd-filesystem-2.4.56-1.amzn2023.noarch              httpd-tools-2.4.56-1.amzn2023.x86_64      libbrotli-1.0.9-4.amzn2023.0.2.x86_64            
+  mailcap-2.1.49-3.amzn2023.0.3.noarch                   mod_http2-2.0.11-2.amzn2023.x86_64        mod_lua-2.4.56-1.amzn2023.x86_64                 
+
+Complete!
+[ec2-user@ip-172-31-21-175 husband]$ sudo systemctl enable httpd
+Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.
+[ec2-user@ip-172-31-21-175 husband]$ sudo systemctl start httpd
+[ec2-user@ip-172-31-21-175 husband]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: active (running) since Tue 2023-07-25 14:48:41 UTC; 57s ago
+       Docs: man:httpd.service(8)
+   Main PID: 27148 (httpd)
+     Status: "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec"
+      Tasks: 177 (limit: 1114)
+     Memory: 12.8M
+        CPU: 98ms
+     CGroup: /system.slice/httpd.service
+             ├─27148 /usr/sbin/httpd -DFOREGROUND
+             ├─27149 /usr/sbin/httpd -DFOREGROUND
+             ├─27150 /usr/sbin/httpd -DFOREGROUND
+             ├─27151 /usr/sbin/httpd -DFOREGROUND
+             └─27152 /usr/sbin/httpd -DFOREGROUND
+
+Jul 25 14:48:41 ip-172-31-21-175.ec2.internal systemd[1]: Starting httpd.service - The Apache HTTP Server...
+Jul 25 14:48:41 ip-172-31-21-175.ec2.internal systemd[1]: Started httpd.service - The Apache HTTP Server.
+Jul 25 14:48:41 ip-172-31-21-175.ec2.internal httpd[27148]: Server configured, listening on: port 80
+[ec2-user@ip-172-31-21-175 husband]$ sudo yum remove httpd
+Dependencies resolved.
+======================================================================================================================================================
+ Package                                 Architecture               Version                                    Repository                        Size
+======================================================================================================================================================
+Removing:
+ httpd                                   x86_64                     2.4.56-1.amzn2023                          @amazonlinux                      60 k
+Removing unused dependencies:
+ apr                                     x86_64                     1.7.2-2.amzn2023.0.2                       @amazonlinux                     297 k
+ apr-util                                x86_64                     1.6.3-1.amzn2023.0.1                       @amazonlinux                     217 k
+ apr-util-openssl                        x86_64                     1.6.3-1.amzn2023.0.1                       @amazonlinux                      24 k
+ generic-logos-httpd                     noarch                     18.0.0-12.amzn2023.0.3                     @amazonlinux                      21 k
+ httpd-core                              x86_64                     2.4.56-1.amzn2023                          @amazonlinux                     4.7 M
+ httpd-filesystem                        noarch                     2.4.56-1.amzn2023                          @amazonlinux                     464  
+ httpd-tools                             x86_64                     2.4.56-1.amzn2023                          @amazonlinux                     201 k
+ libbrotli                               x86_64                     1.0.9-4.amzn2023.0.2                       @amazonlinux                     771 k
+ mailcap                                 noarch                     2.1.49-3.amzn2023.0.3                      @amazonlinux                      78 k
+ mod_http2                               x86_64                     2.0.11-2.amzn2023                          @amazonlinux                     395 k
+ mod_lua                                 x86_64                     2.4.56-1.amzn2023                          @amazonlinux                     143 k
+
+Transaction Summary
+======================================================================================================================================================
+Remove  12 Packages
+
+Freed space: 6.9 M
+Is this ok [y/N]: y
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                              1/1 
+  Running scriptlet: httpd-2.4.56-1.amzn2023.x86_64                                                                                              1/12 
+Removed "/etc/systemd/system/multi-user.target.wants/httpd.service".
+
+  Erasing          : httpd-2.4.56-1.amzn2023.x86_64                                                                                              1/12 
+  Running scriptlet: httpd-2.4.56-1.amzn2023.x86_64                                                                                              1/12 
+  Erasing          : mod_lua-2.4.56-1.amzn2023.x86_64                                                                                            2/12 
+  Erasing          : mod_http2-2.0.11-2.amzn2023.x86_64                                                                                          3/12 
+  Erasing          : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                           4/12 
+  Erasing          : httpd-core-2.4.56-1.amzn2023.x86_64                                                                                         5/12 
+  Erasing          : httpd-tools-2.4.56-1.amzn2023.x86_64                                                                                        6/12 
+  Erasing          : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                        7/12 
+  Erasing          : httpd-filesystem-2.4.56-1.amzn2023.noarch                                                                                   8/12 
+  Erasing          : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                        9/12 
+  Erasing          : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                            10/12 
+  Erasing          : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                               11/12 
+  Erasing          : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                      12/12 
+  Running scriptlet: libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                      12/12 
+  Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                             1/12 
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                        2/12 
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                3/12 
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                           4/12 
+  Verifying        : httpd-2.4.56-1.amzn2023.x86_64                                                                                              5/12 
+  Verifying        : httpd-core-2.4.56-1.amzn2023.x86_64                                                                                         6/12 
+  Verifying        : httpd-filesystem-2.4.56-1.amzn2023.noarch                                                                                   7/12 
+  Verifying        : httpd-tools-2.4.56-1.amzn2023.x86_64                                                                                        8/12 
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                       9/12 
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                       10/12 
+  Verifying        : mod_http2-2.0.11-2.amzn2023.x86_64                                                                                         11/12 
+  Verifying        : mod_lua-2.4.56-1.amzn2023.x86_64                                                                                           12/12 
+
+Removed:
+  apr-1.7.2-2.amzn2023.0.2.x86_64                        apr-util-1.6.3-1.amzn2023.0.1.x86_64      apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64     
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch      httpd-2.4.56-1.amzn2023.x86_64            httpd-core-2.4.56-1.amzn2023.x86_64              
+  httpd-filesystem-2.4.56-1.amzn2023.noarch              httpd-tools-2.4.56-1.amzn2023.x86_64      libbrotli-1.0.9-4.amzn2023.0.2.x86_64            
+  mailcap-2.1.49-3.amzn2023.0.3.noarch                   mod_http2-2.0.11-2.amzn2023.x86_64        mod_lua-2.4.56-1.amzn2023.x86_64                 
+
+Complete!
+[ec2-user@ip-172-31-21-175 husband]$ sudo yum install apache
+Last metadata expiration check: 0:40:48 ago on Tue Jul 25 14:12:05 2023.
+No match for argument: apache
+Error: Unable to find a match: apache
+[ec2-user@ip-172-31-21-175 husband]$ sudo yum install apachehttpd
+Last metadata expiration check: 0:41:34 ago on Tue Jul 25 14:12:05 2023.
+No match for argument: apachehttpd
+Error: Unable to find a match: apachehttpd
+[ec2-user@ip-172-31-21-175 husband]$ sudo yum install httpd.x86_64
+Last metadata expiration check: 0:45:55 ago on Tue Jul 25 14:12:05 2023.
+Dependencies resolved.
+======================================================================================================================================================
+ Package                                 Architecture               Version                                     Repository                       Size
+======================================================================================================================================================
+Installing:
+ httpd                                   x86_64                     2.4.56-1.amzn2023                           amazonlinux                      48 k
+Installing dependencies:
+ apr                                     x86_64                     1.7.2-2.amzn2023.0.2                        amazonlinux                     129 k
+ apr-util                                x86_64                     1.6.3-1.amzn2023.0.1                        amazonlinux                      98 k
+ generic-logos-httpd                     noarch                     18.0.0-12.amzn2023.0.3                      amazonlinux                      19 k
+ httpd-core                              x86_64                     2.4.56-1.amzn2023                           amazonlinux                     1.4 M
+ httpd-filesystem                        noarch                     2.4.56-1.amzn2023                           amazonlinux                      15 k
+ httpd-tools                             x86_64                     2.4.56-1.amzn2023                           amazonlinux                      82 k
+ libbrotli                               x86_64                     1.0.9-4.amzn2023.0.2                        amazonlinux                     315 k
+ mailcap                                 noarch                     2.1.49-3.amzn2023.0.3                       amazonlinux                      33 k
+Installing weak dependencies:
+ apr-util-openssl                        x86_64                     1.6.3-1.amzn2023.0.1                        amazonlinux                      17 k
+ mod_http2                               x86_64                     2.0.11-2.amzn2023                           amazonlinux                     150 k
+ mod_lua                                 x86_64                     2.4.56-1.amzn2023                           amazonlinux                      62 k
+
+Transaction Summary
+======================================================================================================================================================
+Install  12 Packages
+
+Total download size: 2.3 M
+Installed size: 6.9 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/12): apr-1.7.2-2.amzn2023.0.2.x86_64.rpm                                                                           2.0 MB/s | 129 kB     00:00    
+(2/12): httpd-2.4.56-1.amzn2023.x86_64.rpm                                                                            736 kB/s |  48 kB     00:00    
+(3/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                              1.3 MB/s |  17 kB     00:00    
+(4/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                      1.1 MB/s |  98 kB     00:00    
+(5/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                                      17 MB/s | 315 kB     00:00    
+(6/12): mod_lua-2.4.56-1.amzn2023.x86_64.rpm                                                                          3.9 MB/s |  62 kB     00:00    
+(7/12): httpd-core-2.4.56-1.amzn2023.x86_64.rpm                                                                        26 MB/s | 1.4 MB     00:00    
+(8/12): httpd-tools-2.4.56-1.amzn2023.x86_64.rpm                                                                      3.5 MB/s |  82 kB     00:00    
+(9/12): mod_http2-2.0.11-2.amzn2023.x86_64.rpm                                                                        6.2 MB/s | 150 kB     00:00    
+(10/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.rpm                                                                     2.2 MB/s |  33 kB     00:00    
+(11/12): generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch.rpm                                                        1.3 MB/s |  19 kB     00:00    
+(12/12): httpd-filesystem-2.4.56-1.amzn2023.noarch.rpm                                                                1.3 MB/s |  15 kB     00:00    
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                  11 MB/s | 2.3 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                              1/1 
+  Installing       : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                             1/12 
+  Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                2/12 
+  Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                        3/12 
+  Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                        4/12 
+  Installing       : httpd-tools-2.4.56-1.amzn2023.x86_64                                                                                        5/12 
+  Running scriptlet: httpd-filesystem-2.4.56-1.amzn2023.noarch                                                                                   6/12 
+  Installing       : httpd-filesystem-2.4.56-1.amzn2023.noarch                                                                                   6/12 
+  Installing       : httpd-core-2.4.56-1.amzn2023.x86_64                                                                                         7/12 
+  Installing       : mod_lua-2.4.56-1.amzn2023.x86_64                                                                                            8/12 
+  Installing       : mod_http2-2.0.11-2.amzn2023.x86_64                                                                                          9/12 
+  Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                          10/12 
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                      11/12 
+  Installing       : httpd-2.4.56-1.amzn2023.x86_64                                                                                             12/12 
+  Running scriptlet: httpd-2.4.56-1.amzn2023.x86_64                                                                                             12/12 
+  Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                             1/12 
+  Verifying        : httpd-2.4.56-1.amzn2023.x86_64                                                                                              2/12 
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                        3/12 
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                4/12 
+  Verifying        : httpd-core-2.4.56-1.amzn2023.x86_64                                                                                         5/12 
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                       6/12 
+  Verifying        : mod_lua-2.4.56-1.amzn2023.x86_64                                                                                            7/12 
+  Verifying        : httpd-tools-2.4.56-1.amzn2023.x86_64                                                                                        8/12 
+  Verifying        : mod_http2-2.0.11-2.amzn2023.x86_64                                                                                          9/12 
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                       10/12 
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                          11/12 
+  Verifying        : httpd-filesystem-2.4.56-1.amzn2023.noarch                                                                                  12/12 
+
+Installed:
+  apr-1.7.2-2.amzn2023.0.2.x86_64                        apr-util-1.6.3-1.amzn2023.0.1.x86_64      apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64     
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch      httpd-2.4.56-1.amzn2023.x86_64            httpd-core-2.4.56-1.amzn2023.x86_64              
+  httpd-filesystem-2.4.56-1.amzn2023.noarch              httpd-tools-2.4.56-1.amzn2023.x86_64      libbrotli-1.0.9-4.amzn2023.0.2.x86_64            
+  mailcap-2.1.49-3.amzn2023.0.3.noarch                   mod_http2-2.0.11-2.amzn2023.x86_64        mod_lua-2.4.56-1.amzn2023.x86_64                 
+
+Complete!
+[ec2-user@ip-172-31-21-175 husband]$ sudo systemctl enable httpd.service
+Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.
+[ec2-user@ip-172-31-21-175 husband]$ sudo systemctl start httpd.service
+[ec2-user@ip-172-31-21-175 husband]$ history
+    1  mkdir husband\
+    2  mkdir husband
+    3  ls
+    4  cd husband
+    5  pwd
+    6  nano wife
+    7  cat wife
+    8  ls -al
+    9  chmod 011 wife
+   10  ls -al
+   11  rm wife
+   12  ls
+   13  sudo yum install nginx
+   14  sudo systemctl enable nginx
+   15  sudo systemctl start nginx
+   16  sudo systemctl status nginx
+   17  sudo yum remove nginx
+   18  history
+   19  sudo yum install httpd
+   20  sudo systemctl enable httpd
+   21  sudo systemctl start httpd
+   22  sudo systemctl status httpd
+   23  sudo yum remove httpd
+   24  sudo yum install apache
+   25  sudo yum install apachehttpd
+   26  sudo yum install httpd.x86_64
+   27  sudo systemctl enable httpd.service
+   28  sudo systemctl start httpd.service
+   29  history
+[ec2-user@ip-172-31-21-175 husband]$ 

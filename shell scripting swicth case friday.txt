@@ -1,0 +1,59 @@
+[ec2-user@ip-172-31-82-158 ~]$ mkdir  wonderful
+[ec2-user@ip-172-31-82-158 ~]$ ls
+wonderful
+[ec2-user@ip-172-31-82-158 ~]$ cd wonderful
+[ec2-user@ip-172-31-82-158 wonderful]$ nano wizkid
+[ec2-user@ip-172-31-82-158 wonderful]$ nano wizkid.sh
+[ec2-user@ip-172-31-82-158 wonderful]$ touch pizza burger meat fish eggs
+[ec2-user@ip-172-31-82-158 wonderful]$ ls
+burger  eggs  fish  meat  pizza  wizkid.sh
+[ec2-user@ip-172-31-82-158 wonderful]$ chmod 777 wizkid.sh
+[ec2-user@ip-172-31-82-158 wonderful]$ ./wizkid.sh
+Hey please choose an option
+
+a = To see the current date
+b = List all the files in current dir
+a
+Fri Jul 28 14:47:34 UTC 2023
+[ec2-user@ip-172-31-82-158 wonderful]$ ./wizkid.sh
+Hey please choose an option
+
+a = To see the current date
+b = List all the files in current dir
+b
+burger  eggs  fish  meat  pizza  wizkid.sh
+[ec2-user@ip-172-31-82-158 wonderful]$ ./wizkid.sh
+Hey please choose an option
+
+a = To see the current date
+b = List all the files in current dir
+t
+it is not a valid input,please enter a valid input
+[ec2-user@ip-172-31-82-158 wonderful]$ cat wizkid.sh
+#!/bin/bash
+
+echo "Hey please choose an option"
+echo
+echo a = To see the current date
+echo b = List all the files in current dir
+
+read choice
+
+case $choice in
+    a)date;;
+    b)ls;;
+    *)echo "it is not a valid input,please enter a valid input"
+esac
+[ec2-user@ip-172-31-82-158 wonderful]$ history
+    1  mkdir  wonderful
+    2  ls
+    3  cd wonderful
+    4  nano wizkid
+    5  nano wizkid.sh
+    6  touch pizza burger meat fish eggs
+    7  ls
+    8  chmod 777 wizkid.sh
+    9  ./wizkid.sh
+   10  cat wizkid.sh
+   11  history
+[ec2-user@ip-172-31-82-158 wonderful]$ 
