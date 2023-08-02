@@ -1,0 +1,13 @@
+30  mkdir mentor
+   31  ls
+   32  cd mentor
+   33  nano baby.sh
+   34  ls
+   35  ./baby.sh
+   36  chmod 777 baby.sh
+   37  ./baby.sh
+   38  nano baby.sh
+   39  cat baby.sh
+   40  ./baby.sh
+   41  history
+[ec2-user@ip-172-31-21-175 mentor]$ 
